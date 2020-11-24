@@ -1,0 +1,30 @@
+
+
+<div>
+  
+
+  <!-- <input type="text" [formControl]="nombreUsuarioControl" />
+  <input type="text" [formControl]="contraseniaControl" />
+
+  <input type="button" (click)="SendInfo()" value="Enviar" />-->
+
+
+  <div class="box">
+
+    <form>
+      <img src="assets/Logo.png">
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="nombreUsuarioControl">
+        <label> Nombre de usuario</label>
+      </div>
+      <div class="inputBox">
+        <input type="password" name="" required="" [formControl]="contraseniaControl">
+        <label> Contraseña</label>
+      </div>
+      <input type="submit" name="" (click)="SendInfo()" value="Ingresar">
+      <h6><br>¿ no tienes una cuenta ?</h6>
+      <a href="registro.html" class="mensaje"> registrate acá</a>
+    </form>
+  </div>
+
+</div>
