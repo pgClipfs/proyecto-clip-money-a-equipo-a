@@ -34,12 +34,18 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\interfaces.ts" />
+    <None Remove="ClientApp\src\app\login\login.component.ts" />
+    <None Remove="ClientApp\src\app\security\auth.guard.ts" />
+    <None Remove="ClientApp\src\app\service\apiauth.service.ts" />
     <None Remove="ClientApp\src\app\service\user.service.ts" />
     <None Remove="ClientApp\src\app\user\user.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\interfaces.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\security\auth.guard.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\service\apiauth.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\service\user.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\user\user.component.ts" />
   </ItemGroup>
