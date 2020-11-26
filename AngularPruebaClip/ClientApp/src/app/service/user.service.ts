@@ -25,9 +25,13 @@ export class UserService {
   constructor(protected http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.baseUrl = baseUrl;
   }
-  public Add(nombreUsuario, contraseña) {
+  public Add(nombreUsuario, contraseña, nombre, apellido, dni, domicilio, telefono, cuil, correoElectronico ) {
     this.http.post<MyResponse>(this.baseUrl + 'api/Cliente/Add',
-      { 'NombreUsuario': nombreUsuario, 'Contraseña': contraseña }, httpOptions).
+      {
+        'NombreUsuario': nombreUsuario, 'Contraseña': contraseña, 'Nombre': nombre,
+        'Apellido': apellido, 'DNI': dni, 'Domicilio': domicilio, 'Telefono': telefono,
+        'Cuil': cuil, 'CorreoElectronico': correoElectronico
+      }, httpOptions).
       subscribe
       (result => {
           console.log(result);

@@ -35,10 +35,13 @@ namespace AngularPruebaClip.Models
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         [StringLength(10)]
-        public int? Dni { get; set; }
+        public string Dni { get; set; }
         public string Domicilio { get; set; }
-        public int? Cuil { get; set; }
+        public string Cuil { get; set; }
         public byte[] Foto { get; set; }
+
+        public string CorreoElectronico { get; set; }
+        public string Telefono { get; set; }
 
     }
 }

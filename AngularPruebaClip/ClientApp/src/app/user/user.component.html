@@ -1,29 +1,53 @@
 
 
 <div>
-  
-
-  <!-- <input type="text" [formControl]="nombreUsuarioControl" />
-  <input type="text" [formControl]="contraseniaControl" />
-
-  <input type="button" (click)="SendInfo()" value="Enviar" />-->
-
 
   <div class="box">
 
     <form>
       <img src="assets/Logo.png">
+
       <div class="inputBox">
         <input type="text" name="" required="" [formControl]="nombreUsuarioControl">
-        <label> Nombre de usuario</label>
+        <label> Nombre Usuario </label>
       </div>
       <div class="inputBox">
         <input type="password" name="" required="" [formControl]="contraseniaControl">
-        <label> Contraseña</label>
+        <label> Contraseña </label>
       </div>
-      <input type="submit" name="" (click)="SendInfo()" value="Ingresar">
-      <h6><br>¿ no tienes una cuenta ?</h6>
-      <a href="registro.html" class="mensaje"> registrate acá</a>
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="nombreControl">
+        <label> Nombre </label>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="apellidoControl">
+        <label> Apellido </label>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="dniControl">
+        <label> DNI </label>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="domicilioControl">
+        <label> Domicilio </label>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="correoElectronicoControl">
+        <label> Correo Electronico </label>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="telefonoControl">
+        <label> Telefono </label>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="" required="" [formControl]="cuilControl">
+        <label> Cuil </label>
+      </div>
+
+       <input type="submit" name="" (click)="SendInfo()" value="Registrarme">
+      
+      
+
     </form>
   </div>
 

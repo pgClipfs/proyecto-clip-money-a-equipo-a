@@ -41,6 +41,13 @@ namespace AngularPruebaClip.Controllers
                 Models.Cliente cliente = new Models.Cliente();
                 cliente.NombreUsuario = model.NombreUsuario;
                 cliente.Contraseña = model.Contraseña;
+                cliente.Nombre = model.Nombre;
+                cliente.Apellido = model.Apellido;
+                cliente.Dni = model.Dni;
+                cliente.Domicilio = model.Domicilio;
+                cliente.CorreoElectronico = model.CorreoElectronico;
+                cliente.Telefono = model.Telefono;
+                cliente.Cuil = model.Cuil;
                 db.Cliente.Add(cliente);
                 db.SaveChanges();
                 

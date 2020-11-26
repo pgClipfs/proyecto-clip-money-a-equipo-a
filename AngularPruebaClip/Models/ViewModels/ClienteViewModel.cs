@@ -12,9 +12,12 @@ namespace AngularPruebaClip.Models.ViewModels
         public string Contraseña { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public decimal? Dni { get; set; }
+        public string Dni { get; set; }
         public string Domicilio { get; set; }
-        public int? Cuil { get; set; }
+        public string Cuil { get; set; }
         public byte[] Foto { get; set; }
+        public string CorreoElectronico { get; set; }
+
+        public string Telefono { get; set; }
     }
 }
