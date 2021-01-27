@@ -1,0 +1,70 @@
+﻿<div class="card">
+    <h4 class="card-header">Registro</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="firstName">Nombre</label>
+                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">El nombre es requerido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Apellido</label>
+                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">El apellido es requerido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">El nombre de usuario es requerido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">La Contraseña es requerida</div>
+                    <div *ngIf="f.password.errors.minlength">La Contraseña debe tener 6 caracteres</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="correoelectronico">Correo Electronico</label>
+                <input type="email" formControlName="correoelectronico" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.correoelectronico.errors }">
+                <div *ngIf="submitted && f.correoelectronico.errors" class="invalid-feedback">
+                    <div *ngIf="f.correoelectronico.errors.required">El Correo Electrónico es requerido</div>
+                    <div *ngIf="f.correoelectronico.errors.minlength">El Correo Electrónico debe tener una dirección de email</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cuil">Cuil</label>
+                <input type="text" formControlName="cuil" class="form-control" >
+                
+            </div>
+            <div class="form-group">
+                <label for="DNI">DNI</label>
+                <input type="text" formControlName="DNI" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.DNI.errors }" >
+                <div *ngIf="submitted && f.DNI.errors" class="invalid-feedback">
+                    <div *ngIf="f.DNI.errors.required">El DNI es requerido</div>
+                    <div *ngIf="f.DNI.errors.minlength">El DNI debe tener 8 caracteres</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="domicilio">Domicilio</label>
+                <input type="text" formControlName="domicilio" class="form-control" >
+                
+            </div>
+            
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Registro
+                </button>
+                <a routerLink="../login" class="btn btn-link">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

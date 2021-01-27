@@ -1,0 +1,32 @@
+﻿
+<div class="card">
+    <h4 class="card-header">Iniciar sesión ClipMoney</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">El usuario es requerido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Contraseña requerida</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Iniciar
+                </button>
+                <div class="form-group">
+                <h6><br> ¿ Aún no tienes una cuenta ?</h6>
+                <a routerLink="../register" class="btn btn-link, btn btn-primary ">Registrarse</a>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>

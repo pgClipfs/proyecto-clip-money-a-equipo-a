@@ -1,0 +1,68 @@
+﻿<div class="p-4">
+    <div class="container">
+        <h1>Hola {{user.firstName}}!</h1>
+    <div id="content">
+            <div class="container-fluid">
+
+                    <div class="col-md-12 ">
+                        <div class="page-header">
+                            <h3>Mi Saldo: ${{saldo2}}</h3>
+                        </div>
+                    <div class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+
+                        <label for="saldo">Depositar dinero</label>
+                        <input type="text"  formControlName="saldo" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                       <button [disabled]="loading"  class="btn btn-primary">
+                        <span *ngIf="loading"  class="spinner-border spinner-border-sm mr-1"></span>
+                        Depositar
+                    </button>
+                    </div>
+                        </form>
+                    </div> 
+                    <div class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+
+                        <label for="saldo">Extraer dinero</label>
+                        <input type="text"   formControlName="saldo" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                    <button [disabled]="loading"  class="btn btn-primary">
+                        <span *ngIf="loading"  class="spinner-border spinner-border-sm mr-1"></span>
+                        Extraer
+                    </button>
+                    </div>
+                        </form>
+                        <br>
+                        <h3> Ultimos Movimientos</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width: 30%">Nombre</th>
+                <th style="width: 30%">Tipo de transaccion</th>
+                <th style="width: 30%">Monto</th>
+                <th style="width: 10%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{user.firstName}}</td>
+                <td>Deposito</td>
+                <td>${{user.saldo}}</td>
+                <td style="white-space: nowrap">
+                    <tr *ngIf="!saldo2">
+                        <tr *ngIf="!user">
+                        <td colspan="4" class="text-center">
+                            <span class="spinner-border spinner-border-lg align-center"></span>
+                        </td>
+                    </tr>
+    
+                </tbody>
+    
+    </table>
+                   
+                          
