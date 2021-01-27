@@ -1,0 +1,30 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace WebApi.Models.Users
+{
+    public class RegisterModel
+    {
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
+        [Required]
+        public string Username { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+
+        [Required]
+        public string CorreoElectronico { get; set; }
+
+        public string Cuil { get; set; }
+        
+        [Required]
+        public string DNI { get; set; }
+
+        public string Domicilio { get; set; }       
+
+    }
+}

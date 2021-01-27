@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Entities",
+    "\\Helpers",
+    "\\Migrations",
+    "\\Migrations\\SqliteMigrations",
+    "\\Migrations\\SqlServerMigrations",
+    "\\Models",
+    "\\Properties",
+    "\\Services"
+  ],
+  "SelectedNode": "\\Properties\\launchSettings.json",
+  "PreviewInSolutionExplorer": false
+}
